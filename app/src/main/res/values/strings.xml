@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MyBlog</string>
+    <string name="angad">Design by\nAngad Gupta</string>
+    <string name="logo">logo</string>
+    <string name="share_your_story_nwith_us">Share your story\nwith us</string>
+    <string name="login">Login</string>
+    <string name="new_here">New here?</string>
+    <string name="register">Register</string>
 </resources>
