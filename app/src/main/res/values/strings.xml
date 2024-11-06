@@ -6,4 +6,9 @@
     <string name="login">Login</string>
     <string name="new_here">New here?</string>
     <string name="register">Register</string>
+    <string name="profile">Profile</string>
+    <string name="enter_your_name">Enter your name:</string>
+    <string name="email">Enter your email id:</string>
+    <string name="password">Enter your password:</string>
+    <string name="already_register">Already Register ?</string>
 </resources>
