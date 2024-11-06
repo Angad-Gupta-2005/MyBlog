@@ -34,14 +34,14 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     private fun onClickLoginButton() {
-        binding.loginBtn.setOnClickListener {
+        binding.loginActivity.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
     }
 
     private fun onClickRegisterButton() {
-        binding.registerBtn.setOnClickListener {
+        binding.registerActivity.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
             finish()
         }
