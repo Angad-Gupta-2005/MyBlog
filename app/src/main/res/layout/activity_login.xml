@@ -34,36 +34,38 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/registerEmail"
+        android:id="@+id/loginEmail"
         android:layout_width="270dp"
         android:layout_height="50dp"
         android:layout_marginTop="70dp"
         android:autofillHints="true"
-        android:padding="10dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="@string/email"
-        android:textColor="@color/black"
         android:background="@drawable/edit_text_shape"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/registerPass"
+        android:id="@+id/loginPass"
         android:layout_width="270dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:autofillHints="ture"
-        android:padding="10dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="@string/password"
-        android:textColor="@color/black"
         android:background="@drawable/edit_text_shape"
-        app:layout_constraintEnd_toEndOf="@+id/registerEmail"
-        app:layout_constraintStart_toStartOf="@+id/registerEmail"
-        app:layout_constraintTop_toBottomOf="@+id/registerEmail" />
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/loginEmail"
+        app:layout_constraintStart_toStartOf="@+id/loginEmail"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
 
     <Button
         android:id="@+id/loginBtn"
@@ -78,9 +80,9 @@
         app:cornerRadius="10dp"
         app:strokeColor="@color/red"
         app:strokeWidth="2dp"
-        app:layout_constraintEnd_toEndOf="@+id/registerPass"
-        app:layout_constraintStart_toStartOf="@+id/registerPass"
-        app:layout_constraintTop_toBottomOf="@+id/registerPass" />
+        app:layout_constraintEnd_toEndOf="@+id/loginPass"
+        app:layout_constraintStart_toStartOf="@+id/loginPass"
+        app:layout_constraintTop_toBottomOf="@+id/loginPass" />
 
     <TextView
         android:id="@+id/textView6"
