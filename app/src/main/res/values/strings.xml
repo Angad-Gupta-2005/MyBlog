@@ -11,4 +11,15 @@
     <string name="email">Enter your email id:</string>
     <string name="password">Enter your password:</string>
     <string name="already_register">Already Register ?</string>
+    <string name="save_button">Save Article button</string>
+    <string name="blog_text">I recently read a helpful article on Hashnode by Simon Egersand titled. Write Git Commit Messages Your Colleagues Will Love, and it inspired me to dive a little deeper into understanding what makes a Git commit good or bad.</string>
+    <string name="like_button">Like Button</string>
+    <string name="heading_txt">Please Start Writing Better Git Commits</string>
+    <string name="new_blogger">New blogger</string>
+    <string name="date">Jul 29, 2022</string>
+    <string name="read_more">Read more</string>
+    <string name="_20">20</string>
+    <string name="add_new_blog">Add New Blog</string>
+    <string name="background_image">Background image</string>
+    <string name="new_feeds">New feeds</string>
 </resources>

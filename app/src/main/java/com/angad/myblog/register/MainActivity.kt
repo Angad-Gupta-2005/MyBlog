@@ -1,4 +1,5 @@
-package com.angad.myblog
+package com.angad.myblog.register
+
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

@@ -22,7 +22,7 @@
             android:name=".register.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".register.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".register.MainActivity"
             android:exported="false" />
     </application>
 

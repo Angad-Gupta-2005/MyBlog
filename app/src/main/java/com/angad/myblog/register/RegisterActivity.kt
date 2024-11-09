@@ -9,7 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.angad.myblog.Model.UserData
+import com.angad.myblog.model.UserData
 import com.angad.myblog.databinding.ActivityRegisterBinding
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions

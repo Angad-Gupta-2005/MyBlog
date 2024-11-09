@@ -6,4 +6,5 @@
     <color name="sky_blue">#00A3FF</color>
     <color name="blue">#085EBA</color>
     <color name="fade_white">#EFEFEF</color>
+    <color name="dateColor">#C8C8C8</color>
 </resources>

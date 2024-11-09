@@ -7,11 +7,25 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.angad.myblog.databinding.ActivityWelcomeBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class WelcomeActivity : AppCompatActivity() {
 
 //    Creating an instance of binding
     private lateinit var binding: ActivityWelcomeBinding
+
+//    Declare an instance of FirebaseAuth
+    private lateinit var auth: FirebaseAuth
+
+    override fun onStart() {
+        super.onStart()
+        //    check if the user already logged in
+        val currentUser = auth.currentUser
+        if (currentUser != null){
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +39,9 @@ class WelcomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //    Initialised the FirebaseAuth
+        auth = FirebaseAuth.getInstance()
 
 //        On click login button
         onClickLoginButton()

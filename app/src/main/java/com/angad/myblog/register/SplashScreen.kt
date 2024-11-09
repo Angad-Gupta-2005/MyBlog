@@ -1,4 +1,4 @@
-package com.angad.myblog
+package com.angad.myblog.register
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.angad.myblog.databinding.ActivitySplashScreenBinding
-import com.angad.myblog.register.WelcomeActivity
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.angad.myblog.Model
+package com.angad.myblog.model
 
 data class UserData(
     val name: String,
