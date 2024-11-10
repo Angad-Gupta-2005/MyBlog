@@ -22,4 +22,8 @@
     <string name="add_new_blog">Add New Blog</string>
     <string name="background_image">Background image</string>
     <string name="new_feeds">New feeds</string>
+    <string name="back_button">Back Button</string>
+    <string name="blog_title">Blog Title</string>
+    <string name="blog_descripton">Blog Descripton</string>
+    <string name="add_blog">Add Blog</string>
 </resources>

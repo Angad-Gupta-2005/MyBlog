@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyBlog"
         tools:targetApi="31">
+
+        <activity android:name=".register.AddArticleActivity"
+                  android:exported="false"/>
         <activity
             android:name=".register.RegisterActivity"
             android:exported="false" />

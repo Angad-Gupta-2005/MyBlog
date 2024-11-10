@@ -47,7 +47,7 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
 //        Initialised the firebase database
-        database = FirebaseDatabase.getInstance("https://my-blog-70ebf-default-rtdb.asia-southeast1.firebasedatabase.app")
+        database = FirebaseDatabase.getInstance()
 
 //        Initialised the firebase storage
         storage = FirebaseStorage.getInstance()
@@ -124,14 +124,21 @@ class RegisterActivity : AppCompatActivity() {
                                     }
 
                                 // Upload image to firebase storage
-                                val storageReference = storage.reference.child("profile_image/$userId.jpg")
-                                storageReference.putFile(imageUri!!)
-                                    .addOnSuccessListener {
-                                        Toast.makeText(this, "Profile update successful", Toast.LENGTH_SHORT).show()
-                                    }
-                                    .addOnFailureListener { e ->
-                                        Toast.makeText(this, "Profile update fails: ${e.message}", Toast.LENGTH_LONG).show()
-                                    }
+                                if (imageUri != null){
+                                    val storageReference = storage.reference.child("profile_image/$userId.jpg")
+                                    storageReference.putFile(imageUri!!)
+                                        .addOnSuccessListener {
+                                            Toast.makeText(this, "Profile update successful", Toast.LENGTH_SHORT).show()
+                                            storageReference.downloadUrl.addOnCompleteListener { imageUri ->
+                                                val imageUrl = imageUri.result.toString()
+                                                //    Saving the image url to the realtime database
+                                                userReference.child(userId).child("profileImage").setValue(imageUrl)
+                                            }
+                                        }
+                                        .addOnFailureListener { e ->
+                                            Toast.makeText(this, "Profile update fails: ${e.message}", Toast.LENGTH_LONG).show()
+                                        }
+                                }
                             }
                             //   After registration go to login page
                             startActivity(Intent(this, LoginActivity::class.java))

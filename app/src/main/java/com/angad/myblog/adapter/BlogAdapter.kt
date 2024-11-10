@@ -27,7 +27,7 @@ class BlogAdapter(private val items:List<BlogItemModel>): RecyclerView.Adapter<B
         fun bind(blogItemModel: BlogItemModel) {
             binding.heading.text = blogItemModel.heading
             Glide.with(binding.profileImage.context)
-                .load(blogItemModel.imageUrl)
+                .load(blogItemModel.profileImage)
                 .into(binding.profileImage)
 
             binding.userName.text = blogItemModel.userName

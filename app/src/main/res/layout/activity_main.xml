@@ -102,6 +102,7 @@
         android:layout_marginBottom="32dp"
         android:clickable="true"
         android:contentDescription="@string/add_new_blog"
+        android:focusable="true"
         app:tint="@color/white"
         app:backgroundTint="@color/sky_blue"
         app:layout_constraintBottom_toBottomOf="parent"
