@@ -17,15 +17,15 @@ class WelcomeActivity : AppCompatActivity() {
 //    Declare an instance of FirebaseAuth
     private lateinit var auth: FirebaseAuth
 
-//    override fun onStart() {
-//        super.onStart()
-//        //    check if the user already logged in
-//        val currentUser = auth.currentUser
-//        if (currentUser != null){
-//            startActivity(Intent(this, MainActivity::class.java))
-//            finish()
-//        }
-//    }
+    override fun onStart() {
+        super.onStart()
+        //    check if the user already logged in
+        val currentUser = auth.currentUser
+        if (currentUser != null){
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

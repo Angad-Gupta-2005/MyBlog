@@ -43,7 +43,7 @@ class AddArticleActivity : AppCompatActivity() {
             insets
         }
 
-//        On click add blog button save title and description into the firebase realtime database
+//        On click add blog button and save title and description into the firebase realtime database
         onClickAddBlogButton()
     }
 
@@ -100,7 +100,7 @@ class AddArticleActivity : AppCompatActivity() {
                     }
 
                     override fun onCancelled(error: DatabaseError) {
-                        TODO("Not yet implemented")
+                        Toast.makeText(this@AddArticleActivity, "Error ${error.message}", Toast.LENGTH_SHORT).show()
                     }
 
                 })
