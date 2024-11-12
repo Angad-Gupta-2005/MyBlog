@@ -1,10 +1,12 @@
 package com.angad.myblog.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.angad.myblog.databinding.BlogItemBinding
 import com.angad.myblog.model.BlogItemModel
+import com.angad.myblog.register.ReadMoreActivity
 import com.bumptech.glide.Glide
 
 class BlogAdapter(private val items:List<BlogItemModel>): RecyclerView.Adapter<BlogAdapter.BlogViewHolder>() {
@@ -16,7 +18,8 @@ class BlogAdapter(private val items:List<BlogItemModel>): RecyclerView.Adapter<B
     }
 
     override fun onBindViewHolder(holder: BlogViewHolder, position: Int) {
-        holder.bind(items[position])
+        val blogItem = items[position]
+        holder.bind(blogItem)
     }
 
     override fun getItemCount(): Int {
@@ -34,6 +37,14 @@ class BlogAdapter(private val items:List<BlogItemModel>): RecyclerView.Adapter<B
             binding.date.text = blogItemModel.date
             binding.post.text = blogItemModel.post
             binding.likeCount.text = blogItemModel.likeCount.toString()
+
+        //    Set on click listener that jump to read more activity
+            binding.root.setOnClickListener {
+                val context = binding.root.context
+                val intent = Intent(context, ReadMoreActivity::class.java)
+                intent.putExtra("blogItem", blogItemModel)
+                context.startActivity(intent)
+            }
         }
 
     }

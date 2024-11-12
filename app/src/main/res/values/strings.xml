@@ -24,6 +24,8 @@
     <string name="new_feeds">New feeds</string>
     <string name="back_button">Back Button</string>
     <string name="blog_title">Blog Title</string>
-    <string name="blog_descripton">Blog Descripton</string>
+    <string name="blog_description">Blog Description</string>
     <string name="add_blog">Add Blog</string>
+    <string name="titleHeading">Please Start Writing Better Git Commits</string>
+    <string name="textview">TextView</string>
 </resources>

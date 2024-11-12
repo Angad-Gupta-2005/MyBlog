@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/love_ya_like_a_sister"
-        android:text="@string/blog_descripton"
+        android:text="@string/blog_description"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/blogTitle"
@@ -94,7 +94,7 @@
             android:background="@drawable/edit_text_shape_red"
             android:fontFamily="@font/montserrat"
             android:gravity="top"
-            android:hint="@string/blog_descripton"
+            android:hint="@string/blog_description"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
