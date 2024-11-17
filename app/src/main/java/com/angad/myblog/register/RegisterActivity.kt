@@ -47,7 +47,7 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
 //        Initialised the firebase database
-        database = FirebaseDatabase.getInstance()
+        database = FirebaseDatabase.getInstance("https://my-blog-70ebf-default-rtdb.asia-southeast1.firebasedatabase.app")
 
 //        Initialised the firebase storage
         storage = FirebaseStorage.getInstance()
@@ -118,9 +118,11 @@ class RegisterActivity : AppCompatActivity() {
                                 userReference.child(userId).setValue(userData)
                                     .addOnSuccessListener {
                                         Log.d("TAG", "onClickRegisterButton: data saved")
+                                        Toast.makeText(this, "Successfully save data in database", Toast.LENGTH_LONG).show()
                                     }
                                     .addOnFailureListener { e ->
                                         Log.e("TAG", "onClickRegisterButton: Error data ${e.message}" )
+                                        Toast.makeText(this, "Fails to save data in database", Toast.LENGTH_LONG).show()
                                     }
 
                                 // Upload image to firebase storage
