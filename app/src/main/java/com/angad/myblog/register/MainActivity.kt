@@ -49,6 +49,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+//        Calling the function that go to the saved article page
+        onClickSaveArticleButton()
+
+
 //        Initialised the firebaseAuth and databaseReference
         auth = FirebaseAuth.getInstance()
         databaseReference = FirebaseDatabase.getInstance("https://my-blog-70ebf-default-rtdb.asia-southeast1.firebasedatabase.app").reference.child("blogs")
@@ -99,7 +103,13 @@ class MainActivity : AppCompatActivity() {
         onClickFloatingActionButton()
     }
 
-//    Function that load the profile image from firebase realtime database set to profile
+    private fun onClickSaveArticleButton() {
+        binding.saveArticleButton.setOnClickListener {
+            startActivity(Intent(this, SavedArticlesActivity::class.java))
+        }
+    }
+
+    //    Function that load the profile image from firebase realtime database set to profile
     private fun loadUserProfileImage(userId: String) {
         val userReference =
             FirebaseDatabase.getInstance("https://my-blog-70ebf-default-rtdb.asia-southeast1.firebasedatabase.app").reference.child(

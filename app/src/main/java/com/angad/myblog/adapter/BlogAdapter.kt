@@ -19,7 +19,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class BlogAdapter(private val items: List<BlogItemModel>) :
+class BlogAdapter(private val items: MutableList<BlogItemModel>) :
     RecyclerView.Adapter<BlogAdapter.BlogViewHolder>() {
 
     //    Getting the databaseReference and currentUser for like and save functionality
@@ -249,5 +249,13 @@ class BlogAdapter(private val items: List<BlogItemModel>) :
             }
 
         })
+    }
+
+//    For saved article blog
+@SuppressLint("NotifyDataSetChanged")
+fun updateData(savedBlogsArticles: List<BlogItemModel>) {
+        items.clear()
+        items.addAll(savedBlogsArticles)
+        notifyDataSetChanged()
     }
 }
