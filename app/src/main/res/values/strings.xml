@@ -28,4 +28,8 @@
     <string name="add_blog">Add Blog</string>
     <string name="titleHeading">Please Start Writing Better Git Commits</string>
     <string name="textview">TextView</string>
+    <string name="userName">Angad Gupta</string>
+    <string name="add_new_article">Add new article</string>
+    <string name="your_articles">Your articles</string>
+    <string name="log_out">Log out</string>
 </resources>

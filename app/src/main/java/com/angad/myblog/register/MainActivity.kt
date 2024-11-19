@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.angad.myblog.ProfileActivity
 import com.angad.myblog.adapter.BlogAdapter
 import com.angad.myblog.databinding.ActivityMainBinding
 import com.angad.myblog.model.BlogItemModel
@@ -51,6 +52,9 @@ class MainActivity : AppCompatActivity() {
 
 //        Calling the function that go to the saved article page
         onClickSaveArticleButton()
+
+//        Calling the function that go to the profile page
+        onClickProfileImage()
 
 
 //        Initialised the firebaseAuth and databaseReference
@@ -101,6 +105,12 @@ class MainActivity : AppCompatActivity() {
 
 //        On click Floating Action Button
         onClickFloatingActionButton()
+    }
+
+    private fun onClickProfileImage() {
+        binding.profileImage.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
     }
 
     private fun onClickSaveArticleButton() {
