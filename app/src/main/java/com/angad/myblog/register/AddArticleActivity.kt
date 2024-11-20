@@ -80,6 +80,7 @@ class AddArticleActivity : AppCompatActivity() {
                                 userNameFromDB,
                                 currentDate,
                                 description,
+                                userId,
                                  0,
                                 userImageFromDB
 
